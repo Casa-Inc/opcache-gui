@@ -719,6 +719,9 @@ function InternedStringsPanel(props) {
         <div className="widget-panel">
             <h3 className="widget-header">{props.txt('interned strings usage')}</h3>
             <div className="widget-value widget-info">
+                {props.txt('interned strings usage description') && (
+                    <p className="widget-description" dangerouslySetInnerHTML={{__html: props.txt('interned strings usage description')}}></p>
+                )}
                 <p><b>{props.txt('buffer size')}:</b> {props.buffer_size}</p>
                 <p><b>{props.txt('used memory')}:</b> {props.strings_used_memory}</p>
                 <p><b>{props.txt('free memory')}:</b> {props.strings_free_memory}</p>

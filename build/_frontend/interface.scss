@@ -226,6 +226,15 @@ $footer-border-color: #CCC;
       line-height: 1.75em;
       text-align: left;
     }
+
+    .widget-description {
+      margin-bottom: 0.75em;
+      padding-bottom: 0.75em;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      color: #666;
+      font-style: italic;
+      line-height: 1.5em;
+    }
   }
 
   .tables {

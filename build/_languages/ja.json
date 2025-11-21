@@ -40,6 +40,7 @@
   "Inline functions": "インライン関数",
   "Inline VM handlers": "インラインVMハンドラ",
   "interned strings usage": "共有文字列の使用",
+  "interned strings usage description": "<small>同じ文字列を複数の場所で使用する際、メモリを節約するために文字列を共有する仕組みです。</small>",
   "Invalidate all matching files": "一致するすべてのファイルを無効化",
   "jit buffer free": "JITバッファ空き",
   "jit buffer": "JITバッファ",
