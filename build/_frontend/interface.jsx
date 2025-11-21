@@ -4,7 +4,8 @@ class Interface extends React.Component {
         this.state = {
             realtime: this.getCookie(),
             resetting: false,
-            opstate: props.opstate
+            opstate: props.opstate,
+            showResetModal: false
         }
         this.polling = false;
         this.isSecure = (window.location.protocol === 'https:');
@@ -41,6 +42,11 @@ class Interface extends React.Component {
     }
 
     resetHandler = () => {
+        this.setState({showResetModal: true});
+    }
+
+    confirmReset = () => {
+        this.setState({showResetModal: false});
         if (this.state.realtime) {
             this.setState({resetting: true});
             axios.get(window.location.pathname, {params: {reset: 1}})
@@ -50,6 +56,10 @@ class Interface extends React.Component {
         } else {
             window.location.href = '?reset=1';
         }
+    }
+
+    cancelReset = () => {
+        this.setState({showResetModal: false});
     }
 
     setCookie = () => {
@@ -95,6 +105,13 @@ class Interface extends React.Component {
                     version={this.props.opstate.version.gui}
                     txt={this.txt}
                 />
+                {this.state.showResetModal && (
+                    <ResetConfirmModal
+                        onConfirm={this.confirmReset}
+                        onCancel={this.cancelReset}
+                        txt={this.txt}
+                    />
+                )}
             </>
         );
     }
@@ -1199,6 +1216,26 @@ function Footer(props) {
                title={props.txt("Sponsor this project and author on GitHub")}
             >{props.txt("Sponsor this project")}</a>
         </footer>
+    );
+}
+
+
+function ResetConfirmModal(props) {
+    return (
+        <div className="modal-overlay" onClick={props.onCancel}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                <h3>{props.txt("Reset cache")}</h3>
+                <p>{props.txt("Are you sure you want to reset the entire OPcache? This action cannot be undone.")}</p>
+                <div className="modal-buttons">
+                    <button className="modal-button modal-button-confirm" onClick={props.onConfirm}>
+                        {props.txt("Reset")}
+                    </button>
+                    <button className="modal-button modal-button-cancel" onClick={props.onCancel}>
+                        {props.txt("Cancel")}
+                    </button>
+                </div>
+            </div>
+        </div>
     );
 }
 
