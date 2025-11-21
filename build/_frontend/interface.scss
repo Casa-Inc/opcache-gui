@@ -273,6 +273,16 @@ $footer-border-color: #CCC;
     }
   }
 
+  .directives-description {
+    margin: 0 0 1em 0;
+    padding: 0.75em;
+    background-color: #f5f5f5;
+    border-left: 3px solid $nav-header-color;
+    color: #666;
+    font-style: italic;
+    line-height: 1.5em;
+  }
+
   .directive-list {
     list-style-type: none;
     padding: 0;

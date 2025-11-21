@@ -437,10 +437,15 @@ function Directives(props) {
     });
 
     return (
-        <table className="tables directives-table">
-            <thead><tr><th colSpan="2">{props.txt('Directives')}</th></tr></thead>
-            <tbody>{directiveNodes}</tbody>
-        </table>
+        <>
+            {props.txt('Directives description') && (
+                <p className="directives-description" dangerouslySetInnerHTML={{__html: props.txt('Directives description')}}></p>
+            )}
+            <table className="tables directives-table">
+                <thead><tr><th colSpan="2">{props.txt('Directives')}</th></tr></thead>
+                <tbody>{directiveNodes}</tbody>
+            </table>
+        </>
     );
 }
 

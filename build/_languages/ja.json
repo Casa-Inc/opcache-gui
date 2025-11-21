@@ -19,6 +19,7 @@
   "Descending": "降順",
   "DFA based optimization": "DFAベースの最適化",
   "Directives": "ディレクティブ",
+  "Directives description": "<small>OPcacheの設定項目（php.iniで設定可能なオプション）です。各項目の詳細はリンクからPHP公式マニュアルを確認できます。</small>",
   "Disable CPU-specific optimization": "CPU固有の最適化を無効化",
   "Disable real-time update": "リアルタイム更新を無効化",
   "disabled due to <i>opcache.jit</i> setting": "<i>opcache.jit</i>設定により無効化",
