@@ -80,7 +80,7 @@ $options = [
   "INIT_FCALL_BY_NAME -> DO_FCALL": "INIT_FCALL_BY_NAME -> DO_FCALL",
   "Inline functions": "インライン関数",
   "Inline VM handlers": "インラインVMハンドラ",
-  "interned strings usage": "インターン文字列の使用",
+  "interned strings usage": "共有文字列の使用",
   "Invalidate all matching files": "一致するすべてのファイルを無効化",
   "jit buffer free": "JITバッファ空き",
   "jit buffer": "JITバッファ",
