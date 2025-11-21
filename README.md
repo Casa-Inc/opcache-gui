@@ -4,9 +4,15 @@ A clean and responsive interface for Zend OPcache information, showing statistic
 
 This interface uses ReactJS and Axios and is for modern browsers, and requires a minimum of PHP 7.1.
 
+> **Note:** This is a fork of [amnuts/opcache-gui](https://github.com/amnuts/opcache-gui) with Japanese language support and additional improvements.
+
 ## License
 
 MIT: http://acollington.mit-license.org/
+
+Copyright (c) Andrew Collington (amnuts)
+
+This project is licensed under the MIT License. See the original repository: [amnuts/opcache-gui](https://github.com/amnuts/opcache-gui)
 
 ## Sponsoring this work
 
